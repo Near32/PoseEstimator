@@ -1,0 +1,57 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2876124814/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2876124814.dir/build.make CMakeFiles/cmTryCompileExec2876124814.dir/build
+make[1]: Entering directory '/home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2876124814.dir/CheckSymbolExists.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec2876124814.dir/CheckSymbolExists.c.o   -c /home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2876124814
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2876124814.dir/link.txt --verbose=1
+/usr/bin/gcc         CMakeFiles/cmTryCompileExec2876124814.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2876124814 -rdynamic 
+CMakeFiles/cmTryCompileExec2876124814.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x38): undefined reference to `pthread_create'
+collect2: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2876124814.dir/build.make:91: recipe for target 'cmTryCompileExec2876124814' failed
+make[1]: *** [cmTryCompileExec2876124814] Error 1
+make[1]: Leaving directory '/home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp'
+Makefile:117: recipe for target 'cmTryCompileExec2876124814/fast' failed
+make: *** [cmTryCompileExec2876124814/fast] Error 2
+
+File /home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1962127936/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1962127936.dir/build.make CMakeFiles/cmTryCompileExec1962127936.dir/build
+make[1]: Entering directory '/home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1962127936.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1962127936.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1962127936
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1962127936.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1962127936.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1962127936 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1962127936.dir/build.make:91: recipe for target 'cmTryCompileExec1962127936' failed
+make[1]: Leaving directory '/home/pi/git/PROJECTS/PE/IMUViewer/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1962127936] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec1962127936/fast' failed
+make: *** [cmTryCompileExec1962127936/fast] Error 2
+
+

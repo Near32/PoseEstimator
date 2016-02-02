@@ -1,0 +1,25 @@
+#include "PE.h"
+#include <iostream>
+
+int main(int argc, char* argv[])
+{
+	PE pe;
+	
+	pe.initialize();
+	
+	int i = 10;
+	clock_t time = clock();
+	while(1)
+	{
+		float tc = clock();
+		float dt = (float)((tc-time)/CLOCKS_PER_SEC);
+		time = tc;
+		
+		pe.callback();
+		
+		//std::cout << "DT = " << dt << " seconds." << std::endl;
+	}
+	
+	return 0;
+}
+
